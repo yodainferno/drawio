@@ -1,0 +1,77 @@
+@import "bootstrap";
+
+:root {
+    --bg-color: #CFD8DC;
+    --bg-content: #FFF;
+    --light-border: #CCC;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+#wrapper {
+    font-size: 1.2rem;
+}
+.block {
+    background-color: var(--bg-content);
+    padding: 2rem 5rem;
+    border-radius: 2rem;
+    transition: .3s;
+}
+
+canvas {
+    border: 1px solid var(--light-border);
+    border-radius: 1rem;
+}
+
+.gallery-card {
+    margin: 0 1rem 2rem 1rem;
+    overflow: hidden;
+    box-shadow: 0 5px 5px 0px #ccc;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.gallery-card-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('https://pluspng.com/img-png/sunny-sky-png-photo-gallery-of-sky-4754.png');
+    height: 8rem;
+}
+.gallery-card-title {
+    font-size: 1.4rem;
+    padding: .4rem 2rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+header {
+    background-color: #fff;
+    font-size: 1.5rem;
+}
+header a {
+    text-decoration: none;
+    color: #44616d;
+    padding: 1rem 2rem;
+   
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+header a:hover {
+    background-color: rgb(234, 239, 241);
+}
+
+.image-contain {
+    max-width: 100%;
+    max-height: 100%;
+}
+.header-logo {
+    height: 2rem;
+    margin-right: .5rem;
+}
+
+.gallery-card-title a {
+    text-decoration: none;
+    color: #44616d;
+}

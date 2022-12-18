@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  get 'about', to: 'info#about'
+
   get 'paint', to: 'canvas#paint'
+  get 'paint/:id', to: 'canvas#paint'
   get 'my', to: 'canvas#my'
   get 'gallery', to: 'canvas#gallery'
 

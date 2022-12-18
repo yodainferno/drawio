@@ -1,2 +1,22 @@
-<h1>Canvas#gallery</h1>
-<p>Find me in app/views/canvas/gallery.html.erb</p>
+<div class="container block mt-5 mb-5 text-center">
+    <div>
+        <a type="button" href="/paint" class="d-block btn btn-light fs-4">Новый холст</a>
+    </div>
+
+    <div class="row mt-4">
+        <% if @data.empty? %>
+            <div class="col">Нет данных</div>
+        <% else %>
+            <% @data.each do |current| %>
+                <div class="col-12 col-sm-6 col-md-4 p-0">
+                    <div class="gallery-card">
+                        <div class="gallery-card-image"></div>
+                        <div class="gallery-card-title">
+                            <a href="/paint/<%= current.id %>"><%= current.name %></a>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        <% end %>
+    </div>
+</div>
