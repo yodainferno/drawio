@@ -29,14 +29,9 @@ canvas {
     overflow: hidden;
     box-shadow: 0 5px 5px 0px #ccc;
     border-radius: 1rem;
-    cursor: pointer;
-}
-.gallery-card-image {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('https://pluspng.com/img-png/sunny-sky-png-photo-gallery-of-sky-4754.png');
-    height: 8rem;
+
+    text-decoration: none;
+    color: #44616d;
 }
 .gallery-card-title {
     font-size: 1.4rem;

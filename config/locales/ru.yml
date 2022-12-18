@@ -1,0 +1,16 @@
+ru:
+  menu_paint: "Рисовать!"
+  menu_gallery: "Галлерея"
+  menu_my: "Мои работы"
+  new_canvas: "Новый холста"
+  at: "в"
+  pick_color: "Выберите цвет"
+  pick_weight: "Выберите толщину"
+  private_project: "Приватный проект"
+  active_project: "Активный проект"
+
+  save_pickture: "Сохранить картинку"
+  as_copy: "как копию"
+
+  clear_canvas: "Очистить холст"
+  back: "Назад"

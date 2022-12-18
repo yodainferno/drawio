@@ -8,4 +8,9 @@
     <div class="mt-4">из группы</div>
     <div class="mt-4 fs-2 fw-bold">ИУ6-34Б</div>
     <div class="mt-4 fs-2 fw-bold">С любовью</div>
+
+    <div class="mt-5">
+        <%= button_to "Выйти", destroy_user_session_path, method: :delete, data: {turbo: false}, class: "btn fs-5 w-100 btn-danger" %>
+    </div>
+
 </div>
