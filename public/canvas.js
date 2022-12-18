@@ -20,6 +20,11 @@ function set_line_points_input_value() {
 
 // инициализация прослушки событий
 function init() {
+    previous_x = previous_y = current_x = current_y = current_step = flag = 0; 
+    
+    document.getElementById('change_color').value = line_color;
+    document.getElementById('line_height').value = line_width;
+
     // инициализация переменных
     canvas = document.getElementById('canvas');
     line_points_input = document.getElementById('line_points');

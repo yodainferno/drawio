@@ -18,8 +18,11 @@
             <%= form.text_field :line_points, value: @data, class: 'd-none' %>
             <%= form.text_field :id, value: @id, class: 'd-none' %>
         
-            <div class="col-12 my-3">
+            <div class="col-12 my-3 text-start">
                 <%= form.text_field :name, value: @name, class: 'form-control', placeholder: 'NONAME' %>
+                <% if @creator %>
+                    <small class="text-muted">-> <%= @creator %></small>
+                <% end %>
             </div>
             <div class="col-6 form-check fs-5 ps-5">
                 <%= form.label :private, t(:private_project), class: 'form-check-label' %>

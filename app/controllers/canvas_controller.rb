@@ -4,6 +4,7 @@ class CanvasController < ApplicationController
   def paint
     @id = 0; @name = DEFAULT_NAME; @active = true; @private_doc = true
     @is_it_my = true
+    @creator = nil
     
     @data = '[]'
 
@@ -11,9 +12,11 @@ class CanvasController < ApplicationController
       id = params['id']
 
       founded = Canva.find_by(id: id)
-      @is_it_my = founded.user_id == current_user.id
+      @is_it_my = founded.user_id == current_user.id ? current_user : false
 
       if founded
+        @creator = founded.user.email
+
         @id = founded.id
         @data = founded.data
         @name = founded.name

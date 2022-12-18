@@ -13,7 +13,7 @@
                         <div class="gallery-card-title">
                             <div><%= current.name %></div>
                             <div><small <% if current.user.id == current_user.id %> class="fw-bold" <% end %>><%= current.user.email %></small></div>
-                            <div><small><%= current.created_at.strftime("%d.%m.%y #{t(:at)} %H:%M") %></small></div>
+                            <div><small><%= (current.created_at+3.hours).strftime("%d.%m.%y #{t(:at)} %H:%M") %></small></div>
                         </div>
                     </a>
                 </div>
