@@ -16,6 +16,7 @@ en:
   back: "Back"
   forward: "Forward"
   fix: "Fix it?"
+  download: "Export canvas"
 
   show_status_404: "No art"
   show_status_deleted: "Art was deleted"

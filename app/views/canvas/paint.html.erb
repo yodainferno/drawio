@@ -55,17 +55,12 @@
                 <%= form.label :active, t(:active_project), class: 'form-check-label' %>
                 <%= form.check_box :active, checked: @active, class: 'form-check-input' %>
             </div>
-            <div class="col-12 mt-3">
+            <div class="col-6 mt-3">
                 <%= form.submit t(:save_pickture)+(@is_it_my ? '' : ' '+t(:as_copy)), class: "btn btn-primary w-100", id: 'save-canvas' %>
+            </div>
+            <div class="col-6 mt-2">
+                <a href="" type="button" id="download_button" class="d-block btn btn-primary mt-2"><%= t(:download) %></a>
             </div>
         </div>
     <% end %>
-
-   
-
-    <!-- <div class="row mt-5">
-        <div class="col-12 mt-2">
-            <a href="" type="button" id="download_button" class="d-block btn btn-primary mt-2">Скачать файл</a>
-        </div>
-    </div>-->
 </div>

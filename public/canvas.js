@@ -34,6 +34,7 @@ function init() {
     line_points_input = document.getElementById('line_points');
 
     ctx = canvas.getContext("2d");
+    
     canvas.setAttribute('width', '800px');
     canvas.setAttribute('height', '500px');
 
@@ -58,7 +59,8 @@ function init() {
     let clear_button;
     if (clear_button = document.getElementById('clear_button')) {
         clear_button.onclick = function() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "#fff";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
             line_points = [];
             set_line_points_input_value();
         };
@@ -81,7 +83,8 @@ function init() {
 
             set_line_points_input_value();
             
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "#fff";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
             redraw();
         };
     }
@@ -112,20 +115,24 @@ function init() {
             }
             set_line_points_input_value();
             
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "#fff";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
             redraw();
         };
     }
 
-    // document.getElementById('save_button').onclick = function() {
-    //     // redraw();
-    // };
-
-
-    // document.getElementById('download_button').onclick = function() {
-    //     document.getElementById("download_button").download = "image.png";
-    //     document.getElementById("download_button").href = document.getElementById("canvas").toDataURL("image/png").replace(/^data:image\/[^;]/, 'data:application/octet-stream');
-    // };
+    let download_button;
+    if (download_button = document.getElementById('download_button')) {
+        download_button.onclick = function() {
+            let name_input = document.getElementById("name");
+            let name = 'NONAME';
+            if (name_input && name_input.value.length > 0) {
+                name = name_input.value
+            }
+            document.getElementById("download_button").download = name+".png";
+            document.getElementById("download_button").href = document.getElementById("canvas").toDataURL("image/png").replace(/^data:image\/[^;]/, 'data:application/octet-stream');
+        };
+    }
 
     let change_color_bnt;
     if (change_color_bnt = document.getElementById('change_color')) {
@@ -182,7 +189,8 @@ function draw_and_save() {
 }
 
 function redraw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "#fff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
     for (let i = 0; i < line_points.length; i++) {
         let ppp = line_points[i];
         if (ppp['active'] != 0) {

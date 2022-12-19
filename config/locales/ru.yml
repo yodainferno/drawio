@@ -16,6 +16,7 @@ ru:
   back: "Назад"
   forward: "Вперед"
   fix: "Исправить?"
+  download: "Эспорт холста"
   
   show_status_404: "Запись не найдена"
   show_status_deleted: "Данная запись удалена"

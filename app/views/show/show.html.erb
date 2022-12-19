@@ -3,6 +3,9 @@
     <% if @data != '[]' %>
         <h4>#<%= @id %>: <%= @name %></h4>
         <h5>Автор: <%= @creator %></h5>
+
+        <%= text_field_tag :name, @name, class: 'd-none' %>
+
         <canvas id="canvas" class="mt-5"></canvas>
     <% else %>
         <h4>Рисунок #<%= @id %></h4>
@@ -14,11 +17,9 @@
         <%= form.text_field :line_points, value: @data, class: 'd-none' %>
         <%= form.text_field :id, value: @id, class: 'd-none' %>
     <% end %>
-
-   
-    <!-- <div class="row mt-5">
+    <div class="row">
         <div class="col-12 mt-2">
-            <a href="" type="button" id="download_button" class="d-block btn btn-primary mt-2">Скачать файл</a>
+            <a href="" type="button" id="download_button" class="d-block btn btn-primary mt-2"><%= t(:download) %></a>
         </div>
-    </div>-->
+    </div>
 </div>
