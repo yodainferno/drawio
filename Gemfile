@@ -29,6 +29,9 @@ gem "jbuilder"
 
 gem "devise"
 gem 'bootstrap', '~> 5.2.2'
+gem 'rspec-rails', '~> 6.0', '>= 6.0.1'
+gem 'capybara'
+gem 'webdrivers'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
