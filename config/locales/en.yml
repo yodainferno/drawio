@@ -14,3 +14,10 @@ en:
 
   clear_canvas: "Clear canvas"
   back: "Back"
+  forward: "Forward"
+  fix: "Fix it?"
+
+  show_status_404: "No art"
+  show_status_deleted: "Art was deleted"
+  show_status_private: "Autor made this art private"
+  yours_art: "Only you can see it"

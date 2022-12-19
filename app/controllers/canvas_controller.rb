@@ -1,4 +1,6 @@
 class CanvasController < ApplicationController
+  before_action :authenticate_user!
+
   DEFAULT_NAME = "NONAME"
 
   def paint

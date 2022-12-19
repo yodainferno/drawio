@@ -1,4 +1,15 @@
 <div class="container block mt-5 mb-5 text-center">
+
+    <% if @id > 0 %>
+        <div class="d-flex flex-row-reverse mt-3 mb-5">
+            
+            <div style="border: 1px solid #999; padding: 1rem; width: 20rem">
+                <label for="userid">Ссылка на ресурс</label>
+                <input class="form-control" onClick="this.select();" value="http://localhost:3000/show/<%= @id %>" readonly />
+            </div>
+        </div>
+    <% end %>
+
     <canvas id="canvas" class="mt-3"></canvas>
     
     
@@ -10,6 +21,18 @@
         <div class="col text-start">
             <%= label_tag :line_height, t(:pick_weight), class: 'fs-5 mb-3' %>
             <input type="range" class="form-range" min="1" max="6" value="3" id="line_height">
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-4">
+            <a type="button" id="clear_button" class="d-block text-nowrap btn btn-danger"><%= t(:clear_canvas) %></a>
+        </div>
+        <div class="col-4">
+            <a type="button" id="back_button" class="d-block btn btn-dark"><%= t(:back) %></a>
+        </div>
+        <div class="col-4">
+            <a type="button" id="forward_button" class="d-block btn btn-dark"><%= t(:forward) %></a>
         </div>
     </div>
 
@@ -38,14 +61,7 @@
         </div>
     <% end %>
 
-    <div class="row mt-5">
-        <div class="col-6">
-            <a type="button" id="clear_button" class="d-block btn btn-danger"><%= t(:clear_canvas) %></a>
-        </div>
-        <div class="col-6">
-            <a type="button" id="cancel_button" class="d-block btn btn-warning"><%= t(:back) %></a>
-        </div>
-    </div>
+   
 
     <!-- <div class="row mt-5">
         <div class="col-12 mt-2">

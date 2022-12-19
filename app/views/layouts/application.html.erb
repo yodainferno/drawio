@@ -20,10 +20,13 @@
               <div class="d-inline-block header-logo"><img class="image-contain" src="/logo.png"></div>
               <div class="d-inline-block">DRAW.IO</div>
             </a></div>
-            <div class="col-3 p-0"><a class="d-block px-2" href="/paint"><%=t(:menu_paint)%></a></div>
-            <div class="col-3 p-0"><a class="d-block px-2" href="/gallery"><%=t(:menu_gallery)%></a></div>
-            <div class="col-3 p-0"><a class="d-block px-2" href="/my"><%=t(:menu_my)%></a></div>
-          </div>
+            <div class="col-2 p-0"><a class="d-block px-2" href="/paint"><%=t(:menu_paint)%></a></div>
+            <div class="col-2 p-0"><a class="d-block px-2" href="/gallery"><%=t(:menu_gallery)%></a></div>
+            <div class="col-2 p-0"><a class="d-block px-2" href="/my"><%=t(:menu_my)%></a></div>
+            <div class="col-3 p-0 d-flex flex-column justify-content-center">
+                <div><small><%= current_user.email %> [<%= current_user.id %>]</small></div>
+                <div><%= button_to "Выйти", destroy_user_session_path, method: :delete, data: {turbo: false}, class: "btn btn-danger" %></div>
+            </div>
         </div>
       </header>
     <% end %>

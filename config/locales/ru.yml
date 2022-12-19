@@ -14,3 +14,10 @@ ru:
 
   clear_canvas: "Очистить холст"
   back: "Назад"
+  forward: "Вперед"
+  fix: "Исправить?"
+  
+  show_status_404: "Запись не найдена"
+  show_status_deleted: "Данная запись удалена"
+  show_status_private: "Автор ограничил доступ к ресурсу"
+  yours_art: "Видно только вам"

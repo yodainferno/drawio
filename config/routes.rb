@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'show/:id', to: 'show#show'
   get 'about', to: 'info#about'
 
   get 'paint', to: 'canvas#paint'
@@ -10,5 +11,5 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  root :to => "canvas#paint"
+  root :to => "info#about"
 end

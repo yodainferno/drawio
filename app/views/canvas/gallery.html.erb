@@ -8,10 +8,10 @@
             <div class="col">Нет данных</div>
         <% else %>
             <% @data.each do |current| %>
-                <div class="col-12 col-sm-6 col-md-4 p-0">
+                <div class="col-12 col-md-6 col-lg-4 p-0">
                     <a class="gallery-card d-block" href="/paint/<%= current.id %>" style="opacity: <% if !current.active %>0.5<% else %>1<% end %>">
                         <div class="gallery-card-title">
-                            <div><%= current.name %></div>
+                            <div>#<%= current.id %>: <%= current.name %></div>
                             <div><small <% if current.user.id == current_user.id %> class="fw-bold" <% end %>><%= current.user.email %></small></div>
                             <div><small><%= (current.created_at+3.hours).strftime("%d.%m.%y #{t(:at)} %H:%M") %></small></div>
                         </div>
