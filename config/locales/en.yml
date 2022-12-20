@@ -18,7 +18,7 @@ en:
   fix: "Fix it?"
   download: "Export canvas"
 
-  show_status_404: "No art"
+  show_status404: "No art"
   show_status_deleted: "Art was deleted"
   show_status_private: "Autor made this art private"
   yours_art: "Only you can see it"

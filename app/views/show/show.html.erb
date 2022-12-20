@@ -17,9 +17,11 @@
         <%= form.text_field :line_points, value: @data, class: 'd-none' %>
         <%= form.text_field :id, value: @id, class: 'd-none' %>
     <% end %>
-    <div class="row">
-        <div class="col-12 mt-2">
-            <a href="" type="button" id="download_button" class="d-block btn btn-primary mt-2"><%= t(:download) %></a>
+    <% if @data != '[]' %>
+        <div class="row">
+            <div class="col-12 mt-2">
+                <a href="" type="button" id="download_button" class="d-block btn btn-primary mt-2"><%= t(:download) %></a>
+            </div>
         </div>
-    </div>
+    <% end %>
 </div>

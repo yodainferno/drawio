@@ -18,7 +18,7 @@ ru:
   fix: "Исправить?"
   download: "Эспорт холста"
   
-  show_status_404: "Запись не найдена"
+  show_status404: "Запись не найдена"
   show_status_deleted: "Данная запись удалена"
   show_status_private: "Автор ограничил доступ к ресурсу"
   yours_art: "Видно только вам"
