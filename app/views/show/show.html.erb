@@ -1,6 +1,6 @@
 <div class="container block mt-5 mb-5 text-center">
 
-    <% if @data != '[]' %>
+    <% if @data != '' %>
         <h4>#<%= @id %>: <%= @name %></h4>
         <h5>Автор: <%= @creator %></h5>
 
@@ -17,7 +17,7 @@
         <%= form.text_field :line_points, value: @data, class: 'd-none' %>
         <%= form.text_field :id, value: @id, class: 'd-none' %>
     <% end %>
-    <% if @data != '[]' %>
+    <% if @data != '' %>
         <div class="row">
             <div class="col-12 mt-2">
                 <a href="" type="button" id="download_button" class="d-block btn btn-primary mt-2"><%= t(:download) %></a>

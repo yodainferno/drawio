@@ -22,3 +22,5 @@ ru:
   show_status_deleted: "Данная запись удалена"
   show_status_private: "Автор ограничил доступ к ресурсу"
   yours_art: "Видно только вам"
+  access_error: "Нет доступа к ресурсу"
+  

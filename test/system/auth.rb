@@ -45,7 +45,7 @@ RSpec.describe 'Static content', type: :system do
   end
 
   # сценарий входа верного
-  scenario 'sign in wrond' do
+  scenario 'sign in wrong' do
     sign_up
     find('#logout').click
     expect(current_path).to eq('/users/sign_in')

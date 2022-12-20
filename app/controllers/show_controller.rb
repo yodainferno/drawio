@@ -27,7 +27,7 @@ class ShowController < ApplicationController
   def default_params
     @status = ''
     @id = params['id']
-    @data = '[]'
+    @data = ''
     @creator = ''
     @name = ''
   end

@@ -71,8 +71,11 @@ group :development do
 end
 
 group :test do
-  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+
+  gem 'rails-controller-testing' # гем для тестирования контроллеров (нам нужен метод assigns)
+  gem 'faker' # гем для генерирования случайных данных
+  gem 'shoulda-matchers' # гем для более простых записей тестов (будет использоваться в тестах модели)
 end
