@@ -9,26 +9,6 @@ class CanvasController < ApplicationController
     @result = Canva.new(paint_params).paint(current_user)  
   end
 
-
-
-  # def paint_default_params
-  #   @id = 0
-  #   @name = DEFAULT_NAME
-  #   @active = true
-  #   @private_doc = true
-  #   @is_it_my = true
-  #   @creator = nil
-  #   @data = '[]'
-  # end
-
-  # def paint_success_params(founded)
-  #   @creator = founded.user.email
-  #   @id = founded.id
-  #   @data = founded.data
-  #   @name = founded.name
-  #   @active = founded.active
-  #   @private_doc = founded.private
-  # end
   def save_paint
     data = params['line_points']
 
